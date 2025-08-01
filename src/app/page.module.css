@@ -1,0 +1,15 @@
+.full {
+  /* The image used */
+  background-image: url(/studio-bg.jpg);
+
+  /* Set a specific height */
+  height: 100vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
