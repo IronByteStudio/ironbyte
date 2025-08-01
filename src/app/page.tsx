@@ -23,7 +23,7 @@ export default function Home() {
           <li className="tracking-[-.01em]">
             Save and see your changes instantly.
           </li>
-          <li>
+          <li className="tracking-[-.01em]">
             Hello Blake
           </li>
         </ol>
