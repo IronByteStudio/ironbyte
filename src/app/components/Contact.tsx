@@ -51,7 +51,7 @@ const Contact = () => {
             return;
         }
         window.open(
-            `mailto:YOUREMAILHERE@EMAIL.COM?subject=${formData.Name}&body=${formData.Message}`
+            `mailto:ironbytedevstudio@gmail.com?subject=${formData.Name}&body=${formData.Message}`
         );
     };
 
