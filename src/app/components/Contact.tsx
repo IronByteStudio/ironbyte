@@ -58,12 +58,15 @@ const Contact = () => {
     return (
         <>
             <Box sx={{ bgcolor: "primary.main", padding: 2, textAlign: "center", height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                <Stack direction="column" spacing={2} justifyContent="center" alignItems="center">
-                    <Typography variant="h2" component="h1" color="primary.contrastText" gutterBottom>
+                <Stack spacing={2} alignItems="center">
+                    <Typography variant="h2" color="white" gutterBottom>
                         Contact Us
                     </Typography>
+                    <Typography variant="subtitle1" sx={{ color: "white", maxWidth: 500, textAlign: "center" }}>
+                        Ready to start your next project or have questions? Reach out and let’s create something great together.
+                    </Typography>
                     <Divider />
-                    <Stack justifyContent="center" alignItems="center" sx={{width: "50%"}} direction="column" spacing={2}>
+                    <Stack justifyContent="center" alignItems="center" sx={{width: "50%"}} direction="column" spacing={4}>
                         <ContactField
                             formData={formData}
                             setFormData={setFormData}
@@ -82,10 +85,10 @@ const Contact = () => {
                         />
                         <Button
                             onClick={handleSubmit}
-                            sx={{ px: 4, py: 2, mt:4, width: "25%" }}
+                            sx={{ px: 4, py: 2, mt:4, width: "50%" }}
                             variant="contained"
                         >
-                            Contact Me
+                            Book a call
                         </Button>
                     </Stack>
                 </Stack>
