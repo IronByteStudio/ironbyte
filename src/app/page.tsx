@@ -6,25 +6,29 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Hero from "./components/Hero";
 import { Box } from "@mui/material";
+import Copyright from "./components/Copyright";
 
 export default function Home() {
   return (
-    <Box
-      sx={{
-        height: "100vh",
-        overflowY: "scroll",
-        scrollSnapType: "y mandatory",
-      }}
-    >
-      <Box sx={{ scrollSnapAlign: "start", height: "100vh" }}>
-        <Hero />
+    <>
+      <Box
+        sx={{
+          height: "100vh",
+          overflowY: "scroll",
+          scrollSnapType: "y mandatory",
+        }}
+      >
+        <Box sx={{ scrollSnapAlign: "start", height: "100vh" }}>
+          <Hero />
+        </Box>
+        <Box sx={{ scrollSnapAlign: "start", height: "100vh" }}>
+          <About />
+        </Box>
+        <Box sx={{ scrollSnapAlign: "start", height: "100vh" }}>
+          <Contact />
+        </Box>
       </Box>
-      <Box sx={{ scrollSnapAlign: "start", height: "100vh" }}>
-        <About />
-      </Box>
-      <Box sx={{ scrollSnapAlign: "start", height: "100vh" }}>
-        <Contact />
-      </Box>
-    </Box>
+      <Copyright />
+    </>
   );
 }
