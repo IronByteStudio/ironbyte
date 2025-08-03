@@ -27,8 +27,10 @@ export default function Home() {
         <Box sx={{ scrollSnapAlign: "start", height: "100vh" }}>
           <Contact />
         </Box>
+        <Box sx={{ scrollSnapAlign: "start"}}>
+          <Copyright />
+        </Box>
       </Box>
-      <Copyright />
     </>
   );
 }
