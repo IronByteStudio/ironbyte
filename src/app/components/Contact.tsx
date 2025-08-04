@@ -57,7 +57,19 @@ const Contact = () => {
 
     return (
         <>
-            <Box sx={{ bgcolor: "primary.main", padding: 2, textAlign: "center", height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+            <Box
+                sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: { xs: "flex-start", md: "center" },
+                    alignItems: "center", // Always center horizontally
+                    minHeight: "100vh",
+                    paddingTop: { xs: 4, md: 0 },
+                    bgcolor: "primary.main",
+                    padding: 2,
+                    textAlign: "center",
+                }}
+            >
                 <Stack spacing={2} alignItems="center">
                     <Typography variant="h2" color="white" gutterBottom>
                         Contact Us

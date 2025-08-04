@@ -18,13 +18,13 @@ export default function Home() {
           scrollSnapType: "y mandatory",
         }}
       >
-        <Box sx={{ scrollSnapAlign: "start", height: "100vh" }}>
+        <Box sx={{ scrollSnapAlign: "start", minHeight: "100vh" }}>
           <Hero />
         </Box>
-        <Box sx={{ scrollSnapAlign: "start", height: "100vh" }}>
+        <Box sx={{ scrollSnapAlign: "start", minHeight: "100vh", overflowY: "auto" }}>
           <About />
         </Box>
-        <Box sx={{ scrollSnapAlign: "start", height: "100vh" }}>
+        <Box sx={{ scrollSnapAlign: "start", minHeight: "100vh", overflowY: "auto" }}>
           <Contact />
         </Box>
         <Box sx={{ scrollSnapAlign: "start"}}>
