@@ -9,7 +9,7 @@ const About = () => {
         About Us
       </Typography>
       <Divider />
-      <Typography variant="body1" sx={{ width: "50%" }}>
+      <Typography variant="body1" sx={{ width: { xs: "98%", md: "50%" }, padding: { xs: "1rem 0.5rem", md: "2rem 0" } }}>
         Ironbyte is a two-person web development team passionate about helping small and local businesses grow online. 
         We have experience working with nonprofits and enjoy supporting organizations that make a positive impact. 
         As a faith-based team, we value integrity, service, and building genuine relationships with our clients. 

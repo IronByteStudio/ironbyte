@@ -16,4 +16,22 @@
   background-size: cover;
   background-position: center;
   /*background-attachment: fixed;*/
+  padding: 0 1rem;
+}
+
+@media (max-width: 600px) {
+  .heroBg {
+    height: 70vh; /* Less vertical space on mobile */
+    padding: 0 0.5rem;
+    background-size: cover;
+    background-position: center;
+  }
+  .heroBg h1,
+  .heroBg .MuiTypography-h1 {
+    font-size: 2rem !important;
+    letter-spacing: 4px !important;
+    transform: scaleY(1.05);
+    text-align: center;
+    word-break: break-word;
+  }
 }

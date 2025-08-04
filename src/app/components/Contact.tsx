@@ -66,7 +66,7 @@ const Contact = () => {
                         Ready to start your next project or have questions? Reach out and let’s create something great together.
                     </Typography>
                     <Divider />
-                    <Stack justifyContent="center" alignItems="center" sx={{width: "50%"}} direction="column" spacing={4}>
+                    <Stack justifyContent="center" alignItems="center" sx={{ width: { xs: "98%", md: "50%" }, padding: { xs: "1rem 0.5rem", md: "2rem 0" } }} direction="column" spacing={4}>
                         <ContactField
                             formData={formData}
                             setFormData={setFormData}
@@ -85,7 +85,7 @@ const Contact = () => {
                         />
                         <Button
                             onClick={handleSubmit}
-                            sx={{ px: 4, py: 2, mt:4, width: "50%" }}
+                            sx={{ px: 4, py: 2, mt: 4, width: "50%" }}
                             variant="contained"
                         >
                             Book a call
