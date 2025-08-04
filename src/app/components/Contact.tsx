@@ -19,26 +19,25 @@ const ContactField: React.FC<ContactFieldProps> = ({
     setFormData,
     ...props
 }) => {
-    const theme = useTheme();
-    const text = theme.palette.primary.contrastText;
-
     return (
-        <Box width={1}>
-            <Typography mb={1} color={text}>
-                {label}
-            </Typography>
-            <TextField
-                {...props}
-                sx={{ bgcolor: 1, borderColor: "white", width: 1 }}
-                hiddenLabel
-                id={`Contact-${label}`}
-                variant="filled"
-                value={value}
-                onChange={(e) => {
-                    setFormData({ ...formData, [label]: e.target.value });
-                }}
-            />
-        </Box>
+        <TextField
+            {...props}
+            hiddenLabel
+            id={`Contact-${label}`}
+            variant="filled"
+            value={value}
+            onChange={(e) => {
+                setFormData({ ...formData, [label]: e.target.value });
+            }}
+            placeholder={label}
+            size="small"
+            sx={{
+                bgcolor: "white",
+                borderRadius: 1,
+                width: 1,
+                input: { color: "black" },
+            }}
+        />
     );
 };
 
@@ -56,56 +55,70 @@ const Contact = () => {
     };
 
     return (
-        <>
-            <Box
-                sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: { xs: "flex-start", md: "center" },
-                    alignItems: "center", // Always center horizontally
-                    minHeight: "100vh",
-                    paddingTop: { xs: 4, md: 0 },
-                    bgcolor: "primary.main",
-                    padding: 2,
-                    textAlign: "center",
-                }}
-            >
-                <Stack spacing={2} alignItems="center">
-                    <Typography variant="h2" color="white" gutterBottom>
-                        Contact Us
-                    </Typography>
-                    <Typography variant="subtitle1" sx={{ color: "white", maxWidth: 500, textAlign: "center" }}>
-                        Ready to start your next project or have questions? Reach out and let’s create something great together.
-                    </Typography>
-                    <Divider />
-                    <Stack justifyContent="center" alignItems="center" sx={{ width: { xs: "98%", md: "50%" }, padding: { xs: "1rem 0.5rem", md: "2rem 0" } }} direction="column" spacing={4}>
-                        <ContactField
-                            formData={formData}
-                            setFormData={setFormData}
-                            label="Name"
-                        />
-                        <ContactField
-                            formData={formData}
-                            setFormData={setFormData}
-                            label="Email"
-                        />
-                        <ContactField
-                            formData={formData}
-                            setFormData={setFormData}
-                            multiline
-                            label="Message"
-                        />
-                        <Button
-                            onClick={handleSubmit}
-                            sx={{ px: 4, py: 2, mt: 4, width: "50%" }}
-                            variant="contained"
-                        >
-                            Book a call
-                        </Button>
-                    </Stack>
+        <Box
+            sx={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: { xs: "flex-start", md: "center" },
+                alignItems: "center",
+                minHeight: "100vh",
+                paddingTop: { xs: 4, md: 0 },
+                bgcolor: "primary.main",
+                px: { xs: 1, md: 2 },
+                textAlign: "center",
+            }}
+        >
+            <Stack spacing={2} alignItems="center" sx={{ width: 1 }}>
+                <Typography variant="h2" color="white" gutterBottom>
+                    Contact Us
+                </Typography>
+                <Typography variant="subtitle1" sx={{ color: "white", maxWidth: 500, textAlign: "center" }}>
+                    Ready to start your next project or have questions? Reach out and let’s create something great together.
+                </Typography>
+                <Divider sx={{ width: "100%" }} />
+                <Stack
+                    justifyContent="center"
+                    alignItems="center"
+                    sx={{
+                        width: { xs: "100%", md: "50%" },
+                        padding: { xs: "1rem 0.25rem", md: "2rem 0" },
+                    }}
+                    direction="column"
+                    spacing={2}
+                >
+                    <ContactField
+                        formData={formData}
+                        setFormData={setFormData}
+                        label="Name"
+                    />
+                    <ContactField
+                        formData={formData}
+                        setFormData={setFormData}
+                        label="Email"
+                    />
+                    <ContactField
+                        formData={formData}
+                        setFormData={setFormData}
+                        multiline
+                        minRows={3}
+                        label="Message"
+                    />
+                    <Button
+                        onClick={handleSubmit}
+                        sx={{
+                            px: { xs: 2, md: 4 },
+                            py: { xs: 1, md: 2 },
+                            mt: 2,
+                            width: { xs: "100%", md: "50%" },
+                        }}
+                        variant="contained"
+                        size="small"
+                    >
+                        Book a call
+                    </Button>
                 </Stack>
-            </Box>
-        </>
+            </Stack>
+        </Box>
     );
 };
 
