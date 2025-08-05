@@ -9,9 +9,9 @@
   background-image:
     radial-gradient(
       ellipse 70% 40% at 50% 50%,
-      rgba(12,19,41, 0.98) 0%,
-      rgba(12,19,41, 0.95) 60%,
-      rgba(12,19,41, 0.85) 100%
+      rgba(12, 19, 41, 0.98) 0%,
+      rgba(12, 19, 41, 0.95) 60%,
+      rgba(12, 19, 41, 0.85) 100%
     ),
     url('/studio-bg.jpg');
   background-size: cover;
