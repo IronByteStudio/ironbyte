@@ -26,7 +26,7 @@ IronByte Studio is a development studio focused on creating high-quality digital
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/ironbytestudio/ironbyte.git
+   git clone https://github.com/IronByteStudio/ironbyte.git
    cd ironbyte
    ```
 
@@ -58,4 +58,4 @@ Ready to work together? Get in touch at [ironbytedevstudio@gmail.com](mailto:iro
 
 ---
 
-© {new Date().getFullYear()} IronByte Studio. All rights reserved.
+© 2025 IronByte Studio. All rights reserved.
