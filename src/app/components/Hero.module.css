@@ -1,11 +1,17 @@
-.heroBg {
+.heroContainer {
   position: relative;
   width: 100%;
   height: 100vh;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden; /* Important for parallax effect */
+}
+
+.parallaxBg {
+  position: absolute;
+  top: -20%; /* Extra height to accommodate parallax movement */
+  left: 0;
+  width: 100%;
+  height: 120%; /* Extra height to prevent gaps */
   background-image:
     radial-gradient(
       ellipse 70% 40% at 50% 50%,
@@ -17,18 +23,34 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  will-change: transform; /* Optimize for transforms */
+  z-index: 0; /* Ensure background is behind content */
+}
+
+.heroContent {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0 1rem;
+  z-index: 1; /* Ensure content is above background */
 }
 
 @media (max-width: 600px) {
-  .heroBg {
+  .heroContainer {
     height: 70vh; /* Less vertical space on mobile */
-    padding: 0 0.5rem;
-    background-size: cover;
-    background-position: center;
   }
-  .heroBg h1,
-  .heroBg .MuiTypography-h1 {
+
+  .heroContent {
+    height: 70vh;
+    padding: 0 0.5rem;
+  }
+
+  .heroContent h1,
+  .heroContent .MuiTypography-h1 {
     font-size: 2rem !important;
     letter-spacing: 4px !important;
     transform: scaleY(1.05);
