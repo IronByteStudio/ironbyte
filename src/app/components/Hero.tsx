@@ -19,10 +19,13 @@ const Hero = () => {
     // Find the scroll container by traversing up the DOM
     let scrollContainer: HTMLElement | null = null;
     let parent = containerRef.current?.parentElement;
-    
+
     while (parent) {
       const computedStyle = window.getComputedStyle(parent);
-      if (computedStyle.overflowY === 'scroll' || computedStyle.overflowY === 'auto') {
+      if (
+        computedStyle.overflowY === 'scroll' ||
+        computedStyle.overflowY === 'auto'
+      ) {
         scrollContainer = parent;
         break;
       }
