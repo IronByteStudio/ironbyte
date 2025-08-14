@@ -45,7 +45,7 @@ const Hero = () => {
         <Typography
           variant="h1"
           sx={{
-            color: '#fff',
+            color: 'primary.contrastText',
             fontFamily:
               '"Helvetica Neue", Helvetica, Arial, "Liberation Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif',
             fontWeight: 200, // Ultra thin
@@ -57,7 +57,24 @@ const Hero = () => {
             display: 'inline-block',
           }}
         >
-          IronByte Studio
+          Iron
+          <span style={{ color: '#FF8C42' }}>B</span>yte{' '}
+          <span style={{ position: 'relative', display: 'inline-block' }}>
+            Studio
+            <span
+              style={{
+                position: 'absolute',
+                left: 0,
+                bottom: -8,
+                width: '60%',
+                height: 3,
+                background: '#FF8C42',
+                borderRadius: 2,
+                opacity: 0.85,
+                transform: 'skewX(-18deg)',
+              }}
+            />
+          </span>
         </Typography>
       </div>
     </div>
