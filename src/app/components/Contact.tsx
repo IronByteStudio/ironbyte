@@ -51,6 +51,7 @@ const ContactField: React.FC<ContactFieldProps> = ({
 
 const Contact = () => {
   const [formData, setFormData] = useState<FormDataProps>({});
+  const theme = useTheme();
 
   const handleSubmit = () => {
     if (!formData.Name || !formData.Email || !formData.Message) {
@@ -63,26 +64,14 @@ const Contact = () => {
   };
 
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: { xs: 'flex-start', md: 'center' },
-        alignItems: 'center',
-        minHeight: '100vh',
-        paddingTop: { xs: 4, md: 0 },
-        bgcolor: 'primary.main',
-        px: { xs: 1, md: 2 },
-        textAlign: 'center',
-      }}
-    >
+  <Box sx={{ width: 1, minHeight: '100vh', py: { xs: 4, md: 8 }, px: { xs: 2, md: 0 }, bgcolor: 'primary.main', display: 'flex', alignItems: 'center' }}>
       <Stack spacing={2} alignItems="center" sx={{ width: 1 }}>
-        <Typography variant="h2" color="white" gutterBottom>
+        <Typography variant="h2" color="primary.contrastText" gutterBottom>
           Contact Us
         </Typography>
         <Typography
           variant="subtitle1"
-          sx={{ color: 'white', maxWidth: 500, textAlign: 'center' }}
+          sx={{ color: 'primary.contrastText', maxWidth: 500, textAlign: 'center' }}
         >
           Ready to start your next project or have questions? Reach out and
           let’s create something great together.
@@ -122,6 +111,12 @@ const Contact = () => {
               py: { xs: 1, md: 2 },
               mt: 2,
               width: { xs: '100%', md: '50%' },
+              backgroundColor: theme.palette.accent.main,
+              color: theme.palette.primary.contrastText,
+              '&:hover': {
+                backgroundColor: theme.palette.accent.dark ?? theme.palette.accent.main,
+                color: theme.palette.primary.contrastText,
+              },
             }}
             variant="contained"
             size="small"

@@ -14,10 +14,10 @@ const About = () => {
         }}
       >
         <Stack direction="column" spacing={2} alignItems="center">
-          <Typography variant="h2" component="h1" color="primary" gutterBottom>
+          <Typography variant="h2" component="h1" color="primary.main" gutterBottom>
             About Us
           </Typography>
-          <Divider />
+          <Divider sx={{ borderColor: 'accent.main', borderWidth: 2, width: '40%' }} />
           <Typography
             variant="body1"
             sx={{
