@@ -64,14 +64,28 @@ const Contact = () => {
   };
 
   return (
-  <Box sx={{ width: 1, minHeight: '100vh', py: { xs: 4, md: 8 }, px: { xs: 2, md: 0 }, bgcolor: 'primary.main', display: 'flex', alignItems: 'center' }}>
+    <Box
+      sx={{
+        width: 1,
+        minHeight: '100vh',
+        py: { xs: 4, md: 8 },
+        px: { xs: 2, md: 0 },
+        bgcolor: 'primary.main',
+        display: 'flex',
+        alignItems: 'center',
+      }}
+    >
       <Stack spacing={2} alignItems="center" sx={{ width: 1 }}>
         <Typography variant="h2" color="primary.contrastText" gutterBottom>
           Contact Us
         </Typography>
         <Typography
           variant="subtitle1"
-          sx={{ color: 'primary.contrastText', maxWidth: 500, textAlign: 'center' }}
+          sx={{
+            color: 'primary.contrastText',
+            maxWidth: 500,
+            textAlign: 'center',
+          }}
         >
           Ready to start your next project or have questions? Reach out and
           let’s create something great together.
@@ -114,7 +128,8 @@ const Contact = () => {
               backgroundColor: theme.palette.accent.main,
               color: theme.palette.primary.contrastText,
               '&:hover': {
-                backgroundColor: theme.palette.accent.dark ?? theme.palette.accent.main,
+                backgroundColor:
+                  theme.palette.accent.dark ?? theme.palette.accent.main,
                 color: theme.palette.primary.contrastText,
               },
             }}

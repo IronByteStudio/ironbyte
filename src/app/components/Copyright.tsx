@@ -8,7 +8,9 @@ const Copyright = () => {
       <Typography
         variant="body2"
         sx={{
-          color: isDark ? theme.palette.primary.contrastText : theme.palette.primary.main,
+          color: isDark
+            ? theme.palette.primary.contrastText
+            : theme.palette.primary.main,
         }}
       >
         © {new Date().getFullYear()} IronByte Studio. All rights reserved.
