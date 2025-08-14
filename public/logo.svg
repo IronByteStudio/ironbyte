@@ -1,0 +1,14 @@
+<svg width="320" height="80" viewBox="0 0 320 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="60" height="60" rx="12" fill="#222A35"/>
+  <g>
+    <rect x="25" y="25" width="30" height="30" rx="6" fill="#4FC3F7"/>
+    <circle cx="40" cy="40" r="8" fill="#222A35"/>
+    <rect x="36" y="36" width="8" height="8" rx="2" fill="#4FC3F7"/>
+  </g>
+  <text x="80" y="48" font-family="Helvetica Neue, Arial, sans-serif" font-size="32" font-weight="bold" fill="#222A35" letter-spacing="2">
+    IronByte
+  </text>
+  <text x="82" y="70" font-family="Helvetica Neue, Arial, sans-serif" font-size="16" fill="#4FC3F7" letter-spacing="4">
+    STUDIO
+  </text>
+</svg>
